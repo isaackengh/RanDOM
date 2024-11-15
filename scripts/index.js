@@ -6,6 +6,7 @@ const adverbs = ["happily","miserabley","angrily"];
 
 //get references
 const genButton = document.getElementById("genButton");
+const sentenceSpace = document.getElementById("sentenceSpace");
 
 //event listeners
 genButton.addEventListener("click", onGenButtonClick);
@@ -22,6 +23,8 @@ function onGenButtonClick(){
     let sentence = `The ${chosenAdjective} ${chosenNoun} ${chosenVerb} ${chosenAdverb}.`;
     console.log("Sentence generated:", sentence);
     //update html
+    sentenceSpace.innerHTML = sentence;
+    console.log("innerHTML set to sentence");
 
 
     
